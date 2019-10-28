@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Raleway', sans-serif;
+}
+
+section {
+  padding: 6rem 0;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #616161;
+}
+
+a {
+  text-decoration: none;
+  color: #FAFCFE;
+}
+
+.hblue {
+  color: #2980B9;
+  margin-bottom: 50px;
+}
+
+.hwhite {
+  color: #FAFCFE;
+  margin-bottom: 50px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+header {
+  background: url(/Images/hero-01.jpg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+
+#logo {
+  display: none;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.menu {
+  padding: 2rem 2.5rem;
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.menu .bar,
+.menu .bar::before,
+.menu .bar::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 4rem;
+  background-color: #FAFCFE;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-transition: 650ms;
+  transition: 650ms;
+}
+
+.menu .bar:before {
+  top: -2rem;
+}
+
+.menu .bar::after {
+  top: 2rem;
+}
+
+.active .bar {
+  background-color: transparent;
+}
+
+.active .bar::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 0;
+}
+
+.active .bar::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 0;
+}
+
+.nav {
+  width: 100%;
+  height: 6rem;
+  line-height: 6rem;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.95);
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  -webkit-transition: opacity 650ms;
+  transition: opacity 650ms;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+}
+
+.overlay ul {
+  position: relative;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.overlay ul li {
+  text-transform: uppercase;
+}
+
+.overlay ul li a {
+  display: block;
+  font-size: 2rem;
+  -webkit-transition: all 650ms;
+  transition: all 650ms;
+}
+
+.overlay ul li a:hover {
+  color: #2980B9;
+}
+
+.overlay.menu-open {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+.main-text {
+  line-height: 0;
+  margin: auto;
+  color: #FAFCFE;
+}
+
+.main-text h1 {
+  font-size: 8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+}
+
+.main-text h2 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 2rem;
+  line-height: 1;
+  position: relative;
+}
+
+.main-text p {
+  color: #FAFCFE;
+  margin: 25px 0 150px 0;
+}
+
+.btn {
+  font-size: 1.5rem;
+  border: 2px solid #FAFCFE;
+  padding: 2rem 2.5rem;
+  letter-spacing: 3px;
+  margin-right: -3px;
+  position: relative;
+  margin-top: 5em;
+  border-radius: 5px;
+}
+
+.our-services-inner {
+  margin-top: 70px;
+}
+
+.our-services-inner img {
+  margin-bottom: 15px;
+}
+
+.our-services-inner h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.portfolio {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(transparent)), url(/Images/hero-02.jpg) bottom no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent), url(/Images/hero-02.jpg) bottom no-repeat;
+  background-size: cover;
+}
+
+.portfolio-img {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 10px;
+}
+
+.portfolio-img img {
+  width: 350px;
+  height: 200px;
+}
+
+.team-img {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.team-img-inner {
+  margin-top: 30px;
+}
+
+.team-img-inner img {
+  margin-bottom: 20px;
+  width: 300px;
+  height: 330px;
+}
+
+.team-img-inner h3 {
+  font-size: 2rem;
+  color: #2980B9;
+}
+
+.contact {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(transparent)), url(/Images/hero-03.jpg) bottom no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent), url(/Images/hero-03.jpg) bottom no-repeat;
+  background-size: cover;
+  padding-top: 30px;
+}
+
+.contact p {
+  color: #FAFCFE;
+}
+
+.contact-text {
+  margin-bottom: 20px;
+}
+
+.icons {
+  width: 64px;
+  height: 64px;
+}
+
+.contact-us {
+  margin-top: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (min-width: 950px) {
+  #logo {
+    display: block;
+    margin-top: 40px;
+  }
+  .main-text {
+    width: 60%;
+    margin: auto;
+  }
+  .main-text p {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .services {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .our-services-inner {
+    width: 60%;
+    margin: auto;
+  }
+  .portfolio-img {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (355px)[2];
+        grid-template-columns: repeat(2, 355px);
+  }
+  .team-img {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (350px)[2];
+        grid-template-columns: repeat(2, 350px);
+  }
+  .contact-us {
+    width: 60%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .portfolio-img {
+    -ms-grid-columns: (360px)[3];
+        grid-template-columns: repeat(3, 360px);
+  }
+  .team-img {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (350px)[4];
+        grid-template-columns: repeat(4, 350px);
+  }
+}
